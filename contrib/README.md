@@ -669,3 +669,18 @@ that have no common unit — the cheaper-looking option wins by accident of magn
 Replace the `reduce` in `selectRequirements` (src/x402-guards.ts:142-144) with
 `selectWithAssetPreference` when candidates span multiple assets, or add an optional
 `preferredAssets` field to `X402PayOptions`.
+
+---
+
+## 19. Workspace Release Safety Proposals (#623, #624, #625, #628)
+
+The executable proposal in
+[contrib/workspace-release-safety/](workspace-release-safety/README.md) covers:
+
+- dependency-range compatibility and stale-minimum detection across workspaces;
+- a Changesets adoption plan that preserves the detailed root changelog;
+- isolated tarball installation and smoke checks for the CLI and MCP payer;
+- README installation-name checks against each package manifest.
+
+All implementation targets outside `contrib/` are documented as maintainer
+integration steps and are intentionally unchanged.
